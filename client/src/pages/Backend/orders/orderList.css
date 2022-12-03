@@ -1,0 +1,13 @@
+.orderList {
+  flex: 4;
+}
+
+.orderListOrder {
+  display: flex;
+  align-items: center;
+}
+
+.orderListDelete{
+    color: red;
+    cursor: pointer;
+}

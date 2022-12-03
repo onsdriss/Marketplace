@@ -1,0 +1,13 @@
+.e-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.e-container h2 {
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: #111111;
+    text-transform: uppercase;
+}

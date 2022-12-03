@@ -1,0 +1,87 @@
+{
+  "name": "new",
+  "version": "0.1.0",
+  "main": "index.js",
+  "private": true,
+  "dependencies": {
+    "@emailjs/browser": "^3.6.2",
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.3",
+    "@material-ui/lab": "^4.0.0-alpha.61",
+    "@reduxjs/toolkit": "^1.6.1",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "axios": "^0.21.4",
+    "bootstrap": "^5.1.3",
+    "emailjs-com": "^3.2.0",
+    "firebase": "^9.9.2",
+    "jquery": "^3.6.0",
+    "moment": "^2.29.4",
+    "react": "^17.0.2",
+    "react-bootstrap": "^2.4.0",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.4.0",
+    "react-paypal-button-v2": "^2.6.3",
+    "react-redux": "^8.0.2",
+    "react-router-dom": "^5.3.0",
+    "@iconify/react":"4.0.0",
+    "react-stripe-checkout": "^2.6.3",
+    "redux": "^4.2.0",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-persist": "^6.0.0",
+    "styled-components": "^5.3.5",
+    "react-chartjs-2": "2.11.1",
+    "d3": "^7.6.1",
+    "highcharts": "^9.1.2",
+    "highcharts-react-official": "^3.0.0",
+    "chart.js": "2.9.4",
+    "react-scripts": "5.0.0",
+    "web-vitals": "^2.1.4",
+    "recharts": "^2.0.9",
+    "timeago.js": "^4.0.2",
+    "@material-ui/data-grid": "^4.0.0-alpha.29",
+    "format": "^0.2.2",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.1.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.5",
+    "nodemon": "^2.0.12",
+    "stripe": "^8.174.0"
+  },
+  "scripts": {
+    "start": "concurrently \"nodemon index.js\" \"react-scripts start\"",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.8.6",
+    "postcss-cli": "^10.0.0",
+    "tailwindcss": "^3.1.8"
+  },
+  "browser": {
+    "crypto": false
+}
+  
+}
