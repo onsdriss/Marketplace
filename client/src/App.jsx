@@ -45,6 +45,7 @@ import Sidebar from "./components/Backend/sidebar/Sidebar";
 import Login2 from "./pages/Login_Rege/Login2";
 import ForgottenPassword from "./pages/ForgottenPassword/ForgottenPassword";
 import Pp from "./pages/Backend/product/Pp";
+import ResetPass from "./pages/ForgottenPassword/ResetPass";
 //import Write2 from "./pages/Backend/writeArticle/Write2";
 
 const App = () => {
@@ -108,6 +109,9 @@ const App = () => {
         </Route>
         <Route path="/forgottenpassword">
           <ForgottenPassword/>
+        </Route>
+        <Route path="/reset-password/:id">
+          <ResetPass/>
         </Route>
         <Route path="/FAQ" component={Faq}/>
         <Route path="/shipping" component={ShippingScreen}/>

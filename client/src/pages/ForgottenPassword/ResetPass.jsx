@@ -2,20 +2,24 @@ import React from 'react'
 import "./password.css"
 import { useState } from "react";
 import styled from "styled-components";
-
 import { useDispatch, useSelector } from "react-redux";
+import { useLocation } from "react-router";
+import { Link } from "react-router-dom";
 const Error = styled.span`
   color: red;
 `;
 
-const ForgottenPassword = () => {
-  const [email, setEmail] = useState("");
+const ResetPass= () => {
+  const [password, setpass] = useState("");
   const { isFetching ,error } = useSelector((state) => state.user);
+  const location = useLocation();
+  const id2 = location.pathname.split("/")[2];
+
   const handleSubmit=(e)=>{
     e.preventDefault();
-    console.log(email);
-    fetch("http://localhost:5000/api/forgot-password/", {
-      method:"POST",
+    console.log(password);
+    fetch(`http://localhost:5000/api/users/`+ id2, {
+      method:"PUT",
       crossDomain: "true",
       headers:{
         "Content-Type" : "application/json",
@@ -23,7 +27,7 @@ const ForgottenPassword = () => {
         "Access-Control-Allow-Origin": "*",
       },
       body : JSON.stringify({
-        email,
+        password,
       }),
 
     })
@@ -43,19 +47,21 @@ const ForgottenPassword = () => {
     <div class="login-form">
       <div class="sign-in-htm">
         <div class="group">
-          <label for="user" class="label">Email</label>
+          <label for="user" class="label">Password</label>
           <input 
           id="user" 
-          type="email"
+          type="password"
           class="input"
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={(e) => setpass(e.target.value)}
           />
         </div>
         <br/>
         <br/>
        
         <div class="group">
-          <input type="submit" class="button" value="Submit" onClick={handleSubmit} disabled={isFetching}/>
+            <Link className='link' to="/login" >
+                <input type="submit" class="button" value="Submit" onClick={handleSubmit} disabled={isFetching}/>
+            </Link>
         </div>
         {error && <Error>Something went wrong...</Error>}
         <br/>
@@ -72,4 +78,4 @@ const ForgottenPassword = () => {
   )
 }
 
-export default ForgottenPassword
+export default ResetPass

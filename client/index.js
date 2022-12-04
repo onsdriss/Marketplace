@@ -1,6 +1,3 @@
-
-
-
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -17,9 +14,8 @@ const brandRoute = require("./routes/brand");
 //const orderRoute = require("./routes/order");
 const orderRoute = require("./routes/order");
 const stripeRoute = require("./routes/stripe");
-//const passRoute = require("./routes/forgotPass");
+const passRoute = require("./routes/forgotPass");
 const cors = require("cors");
-
 
 mongoose
   .connect(process.env.MONGO_URL)
@@ -40,8 +36,7 @@ app.use("/api/checkout", stripeRoute);
 app.use("/api/brand", brandRoute);
 app.use("/api/category", categoryRoute);
 app.use("/api/application", applicationRoute);
-//app.use("/api/forgot-password", passRoute);
-
+app.use("/api/forgot-password", passRoute);
 app.get("/api/config/paypal", (req,res)=>{
   res.send(process.env.PAYPAL_CLIENT_ID);
 })
@@ -49,3 +44,5 @@ app.get("/api/config/paypal", (req,res)=>{
 app.listen(5000, () => {
   console.log("Backend server is running!");
 });
+
+

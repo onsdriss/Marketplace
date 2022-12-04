@@ -49,7 +49,8 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.0.5",
     "nodemon": "^2.0.12",
-    "stripe": "^8.174.0"
+    "stripe": "^8.174.0",
+    "nodemailer": "^6.7.5"
   },
   "scripts": {
     "start": "concurrently \"nodemon index.js\" \"react-scripts start\"",
